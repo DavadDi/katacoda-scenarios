@@ -1,13 +1,22 @@
 {
-  "title": "First Class of Docker",
+  "title": "Docker 第一堂课",
   "description": "Hello Docker",
   "difficulty": "beginner",
-  "time": "2 minutes",
+  "time": "10 minutes",
   "details": {
     "steps": [{
-      "title": "Step 1 - Run Command",
+      "title": "Step 1 - 镜像管理",
       "text": "step1.md"
-    }],
+    },
+    {
+      "title": "Step 2 - 运行 Container",
+      "text": "step2.md"
+    },
+     {
+      "title": "Step 3 - 构建镜像",
+      "text": "step3.md"
+    },
+],
     "intro": {
       "text": "intro.md",
       "credits": ""
