@@ -1,6 +1,6 @@
 
 新建 docker 目录，并生成 `hello.txt` 文件。
-`mkdir dockerfile && cd docker && echo 'Hello' > hello.txt && cat hello.txt`{{execute}} 
+`mkdir docker && cd docker && echo 'Hello' > hello.txt && cat hello.txt`{{execute}} 
 
 通过命令行生成对应的 dockerfile 文件。
 `echo -e "FROM nginx\nCOPY ./hello.txt /\nRUN cat /hello.txt" > Dockerfile`{{execute}} 
