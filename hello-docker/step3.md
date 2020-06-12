@@ -1,28 +1,23 @@
-我们可以使用 `docker pull` 命令来从公开的 docker hub 仓库中拉取镜像，公共镜像不需要登录既可以拉取。
 
-`docker pull nginx`{{execute}}
+新建 docker 目录，并生成 `hello.txt` 文件。
+`mkdir dockerfile && cd docker && echo 'Hello' > hello.txt && cat hello.txt`{{execute}} 
 
-接着我们可以使用 `docker images` 来查看当前系统中拉取到的镜像。
+通过命令行生成对应的 dockerfile 文件。
+`echo -e "FROM nginx\nCOPY ./hello.txt /\nRUN cat /hello.txt" > Dockerfile`{{execute}} 
 
+查看 dockerfile 文件内容。
+`cat Dockerfile`{{execute}} 
+
+通过 `docker build` 命令来创建镜像。
+`docker build -t nginx-hello:v1 .`{{execute}} 
+
+接着我们可以使用 `docker images` 来查看构建好的镜像。
 `docker images`{{execute}}
 
-我们可以使用 `docker history nginx` 来查看 *nginx* 镜像的构建历史。
+我们也可以直接运行查看我们自己的镜像是否已经包含了 hello.txt 文件。
+`docker run -d  -p 8080:80 nginx-hello:v1`{{execute}}
 
-`docker history nginx`{{execute}}
+`export CID=$(docker ps|grep nginx|awk '{print $1}') `{{execute}} 导出 nginx 容器想的 ID。
 
-需要想进一步了解 nginx 镜像更加详细的信息可以使用 `docker inspect` 命令进行查看：
-
-`docker inspect nginx`{{execute}}
-
-如果我们计划把当前镜像推动到我们自己的镜像仓库，可以使用 `docker tag` 的命令来对当前镜像添加别名
-
-`docker tag nginx myregestry.com/pub/nginx:latest`{{execute}}
-
-在以上命令执行后，我们查看本地镜像
-
-`docker images`{{execute}}
-
-后续我们可以采用 `docker login myregestry.com`，然后使用命令 `docker push myregestry.com/pub/nginx:latest` 把本地镜像推送到我们自己的镜像仓库。
-
-
-
+查看我们自己添加到镜像中的 hello.txt 文件。
+`docker exec -ti ${CID}  cat /hello.txt`{{execute}}
