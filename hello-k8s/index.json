@@ -1,0 +1,34 @@
+{
+  "title": "kubernetes 第一堂课",
+  "description": "Hello K8S",
+  "difficulty": "beginner",
+  "time": "10 minutes",
+  "details": {
+    "steps": [{
+      "title": "Step 1 - kubectl run",
+      "text": "step1.md"
+    },
+    {
+      "title": "Step 2 - k8s deployment && hpa",
+      "text": "step2.md"
+    },
+     {
+      "title": "Step 3 - scheduler",
+      "text": "step3.md"
+    }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\n"
+  },
+  "backend": {
+    "imageid": "kubernetes"
+  }
+}
