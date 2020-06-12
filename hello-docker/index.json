@@ -1,6 +1,6 @@
 {
-  "title": "Hello World Scenario",
-  "description": "Your First Scenario",
+  "title": "First Class of Docker",
+  "description": "Hello Docker",
   "difficulty": "beginner",
   "time": "2 minutes",
   "details": {
@@ -21,6 +21,6 @@
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
   },
   "backend": {
-    "imageid": "bash"
+    "imageid": "docker"
   }
 }
