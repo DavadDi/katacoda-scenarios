@@ -20,7 +20,7 @@
 
 > katacoda 网络底层做了一定的限制，需要在 Terminal 的 + 号选择端口预览。
 
-运行到后台以后，我们可以使用 `docker ps` {{execute}} 查看已经运行的 container 实例。
+运行到后台以后，我们可以使用 `docker ps`{{execute}} 查看已经运行的 container 实例。
 
 通过这个命令我们会获取到当前运行 container 的 ID 编号，接着我们可以使用 `docker exec` 命令登录到容器内部。
 
@@ -37,7 +37,9 @@
 
 ### 查看日志
 
-我们还可以使用 `docker logs` 查看日志。`docker logs -f  ${CID}` {{execute}}。
+我们还可以使用 `docker logs` 查看日志。
+
+`docker logs -f  ${CID}`{{execute}}。
 
 
 
@@ -46,9 +48,9 @@
 同时，我们还可以采用 `docker cp` 把当前文件 copy 到 container 的目录中或者从 container 目录中 copy 出来。
 
 ```bash
-Usage:  docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-
-        docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH
+docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-
+docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH
 ```
 
-`echo 'Hello' > hello.txt && cat hello.txt`{{execute}}，然后使用 cp 命令 `docker cp hello.txt ${CID}:/` {{execute}}，查看容器中的文件 `docker exec -ti ${CID}  cat /hello.txt`{{execute}}。
+`echo 'Hello' > hello.txt && cat hello.txt`{{execute}}，然后使用 cp 命令 `docker cp hello.txt ${CID}:/`{{execute}}，查看容器中的文件 `docker exec -ti ${CID}  cat /hello.txt`{{execute}}。
 
