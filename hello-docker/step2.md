@@ -25,7 +25,7 @@
 
 如果我们想要在运行容器的时候挂载本地的目录，我们可以使用以下命令新建立一个目录：
 
-`mkdir data && echo 'Hello' > hello.txt && cat hello.txt`{{execute}}  
+`mkdir data && cd data && echo 'Hello' > hello.txt && cat hello.txt`{{execute}}  
 
 运行一个容器 container，把当前 `data` 目录挂载到容器 container 内部的 `/data` 目录，首先我们需要导出当前目录 `export PWD=$(pwd)`{{execute}}，然后把当前目录中的 `data` 目录挂载到容器中，
 
