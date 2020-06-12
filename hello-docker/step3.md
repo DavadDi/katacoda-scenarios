@@ -1,4 +1,3 @@
-
 新建 docker 目录，并生成 `hello.txt` 文件。
 `mkdir docker && cd docker && echo 'Hello' > hello.txt && cat hello.txt`{{execute}} 
 
@@ -17,7 +16,7 @@
 我们也可以直接运行查看我们自己的镜像是否已经包含了 hello.txt 文件。
 `docker run -d  -p 8080:80 nginx-hello:v1`{{execute}}
 
-`export CID=$(docker ps|grep nginx|awk '{print $1}') `{{execute}} 导出 nginx 容器想的 ID。
+`export CID=$(docker ps|grep nginx-hello '{print $1}') `{{execute}} 导出 nginx 容器想的 ID。
 
 查看我们自己添加到镜像中的 hello.txt 文件。
 `docker exec -ti ${CID}  cat /hello.txt`{{execute}}
