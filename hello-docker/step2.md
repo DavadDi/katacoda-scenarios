@@ -16,7 +16,7 @@
 
 如果我们需要把运行的 container 启动到后台可以使用 `-d`。
 
-`docker run -d  -p 8080:80 nginx `{{execute}}  `-p` 是把 container 的端口 `80` 导出到本机的 `8080` 端口。
+`docker run -d  -p 8090:80 nginx `{{execute}}  `-p` 是把 container 的端口 `80` 导出到本机的 `8090` 端口。
 
 > katacoda 网络底层做了一定的限制，需要在 Terminal 的 + 号选择端口预览。
 
@@ -39,7 +39,7 @@
 
 我们还可以使用 `docker logs` 查看日志。
 
-`docker logs -f  ${CID}`{{execute}}。{{interrupt}}。
+`docker logs -f  ${CID}`{{execute}}。{{execute interrupt}}。
 
 
 
