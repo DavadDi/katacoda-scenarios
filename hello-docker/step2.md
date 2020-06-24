@@ -39,7 +39,7 @@
 
 我们还可以使用 `docker logs` 查看日志。
 
-`docker logs -f  ${CID}`{{execute}}。{{execute interrupt}}。
+`docker logs -f  ${CID}`{{execute}}。`停止`{{execute interrupt T1}}。
 
 
 
