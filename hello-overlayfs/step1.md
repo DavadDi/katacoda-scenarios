@@ -28,14 +28,14 @@ OverlayFS 是联合文件系统的一种实现。OverlayFS 在linux主机上只�
 
   * `cd merged`{{execute}}
   * `echo Hello >> lower.txt`{{execute}}
-  * `tree`{{execute}}
+  * `tree ../`{{execute}}
   * `cat lower.txt`{{execute}}
   * `cat ../low/lower.txt`{{execute}}
 
 * 删除文件 lower.txt 
 
-  * `delete lower.txt`{{execute}}
-  * `tree`{{execute}}
+  * `rm lower.txt`{{execute}}
+  * `tree ../`{{execute}}
   * `cat ../low/lower.txt`{{execute}}
 
   
