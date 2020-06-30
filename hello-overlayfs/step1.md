@@ -36,6 +36,7 @@ OverlayFS 是联合文件系统的一种实现。OverlayFS 在linux主机上只�
 
   * `rm lower.txt`{{execute}}
   * `tree ../`{{execute}}
+  * `ls -hl ../upper`{{execute}}
   * `cat ../low/lower.txt`{{execute}}
 
   
