@@ -12,6 +12,7 @@ OverlayFS 是联合文件系统的一种实现。OverlayFS 在linux主机上只�
 
 * 新建目录和初始化
 
+  * `mkdir overlay && cd overlay`{{execute}}
   * `mkdir low upper work`{{execute}}
   * `ls -hl`{{execute}}
   * `echo 'lower' > low/lower.txt`{{execute}}
@@ -28,6 +29,7 @@ OverlayFS 是联合文件系统的一种实现。OverlayFS 在linux主机上只�
   * `cd merged`{{execute}}
   * `echo Hello >> lower.txt`{{execute}}
   * `tree`{{execute}}
+  * `cat lower.txt`{{execute}}
   * `cat ../low/lower.txt`{{execute}}
 
 * 删除文件 lower.txt 
