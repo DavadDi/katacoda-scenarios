@@ -6,7 +6,7 @@
 
 docker cli 命令行可以自己使用参数 `--cpus ` 来限制运行容器的 CPU 核数限制
 
-`docker run  --cpus 1  -d --rm polinux/stress stress  --cpu 4  --verbose`{{execute T1}} ，等待运行以后，我们新建一个终端 T2 使用 `docker stats` 命令查看
+`docker run  --cpus 1  -d --rm polinux/stress stress  --cpu 4  --verbose`{{execute T1}} ，等待运行以后，我们当前终端使用 `docker stats` 命令查看
 
 `export CID=$(docker ps|grep stress|awk '{print $1}') `{{execute T1}}
 
