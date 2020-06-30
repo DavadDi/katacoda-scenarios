@@ -1,0 +1,34 @@
+{
+  "title": "Hello OverlayFS",
+  "description": "Hello OverlayFS",
+  "difficulty": "beginner",
+  "time": "3 minutes",
+  "details": {
+    "steps": [{
+      "title": "Step 1 - Hello OverlayFS",
+      "text": "step1.md"
+    },
+    {
+      "title": "Step 2 - todo",
+      "text": "step2.md"
+    },
+     {
+      "title": "Step 3 - todo",
+      "text": "step3.md"
+    }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\n"
+  },
+  "backend": {
+    "imageid": "docker"
+  }
+}
